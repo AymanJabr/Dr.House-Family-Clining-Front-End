@@ -1,8 +1,9 @@
+import SignIn from './pages/Sign-In';
 
 function App() {
   return (
     <div className="App">
-      Testing
+      <SignIn />
     </div>
   );
 }
