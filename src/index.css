@@ -56,7 +56,7 @@ code {
   font-weight: 100 !important;
 }
 
-.SignInEmailInput {
+.SignInEmailInput, .SignUpEmailInput {
   display: block;
   text-indent: 2vw;
   margin: 20px 15px;
@@ -68,11 +68,11 @@ code {
 
 }
 
-.SignInEmailInput:focus {
+.SignInEmailInput:focus, .SignUpEmailInput:focus {
   outline: none;
 }
 
-.SignInPasswordInput {
+.SignInPasswordInput, .SignUpPasswordInput {
   display: block;
   margin: 20px 15px;
   text-indent: 2vw;
@@ -83,7 +83,7 @@ code {
   border: 1px solid var(--main-gray-text-color);
 }
 
-.SignInPasswordInput:focus {
+.SignInPasswordInput:focus, .SignUpPasswordInput:focus {
   outline: none;
 }
 
@@ -95,7 +95,7 @@ code {
   border: 1px solid red;
 }
 
-.SignInSubmit {
+.SignInSubmit, .SignUpSubmit {
   display: block;
   margin: 10px auto;
   border-radius: 20px;
@@ -106,9 +106,15 @@ code {
   background-color: var(--main-color);
 }
 
-.signInForgotPasswordLink {
+
+
+.signInForgotPasswordLink, .SignUpSignInLink {
   color: var(--secondary-gray-text-color);
   font-size: 1rem;
   text-align: center;
   margin-top: 25vh;
+}
+
+.signInForgotPasswordLink:hover, .SignUpSignInLink:hover {
+  cursor: pointer;
 }

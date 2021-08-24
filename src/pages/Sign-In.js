@@ -2,18 +2,18 @@ const SignIn = () => (
   <div className="singleOuter">
     <div className="backgroundImage" />
     <div className="singleInner">
-      <h1 className="lightTextWeight">Sign In</h1>
+      <h1 className="lightTextWeight">Sign Up</h1>
       <div id="SignInForm">
         <form>
           <input
             type="text"
-            id="Email"
+            id="SignInEmail"
             name="email"
             className="SignInEmailInput"
           />
           <input
             type="text"
-            id="Password"
+            id="SignUpPassword"
             name="password"
             className="SignInPasswordInput"
           />
