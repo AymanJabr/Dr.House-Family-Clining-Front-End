@@ -1,7 +1,7 @@
 const SignIn = () => (
-  <div className="singleOuter">
+  <div className="imageOuter">
     <div className="backgroundImage" />
-    <div className="singleInner">
+    <div className="imageInner">
       <h1 className="lightTextWeight">Sign Up</h1>
       <div id="SignInForm">
         <form>
