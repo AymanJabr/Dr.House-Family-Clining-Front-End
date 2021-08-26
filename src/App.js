@@ -1,9 +1,9 @@
-import MyAppointments from './pages/MyAppointments';
+import TakeAppointments from './pages/TakeAppointment';
 
 function App() {
   return (
     <div className="App">
-      <MyAppointments />
+      <TakeAppointments />
     </div>
   );
 }
