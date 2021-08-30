@@ -43,10 +43,6 @@ code {
   width: 100%;
 }
 
-.textAlignCenter {
-
-}
-
 .singleInner {
   opacity: 1;
   display: flex;
@@ -183,25 +179,58 @@ code {
   color: var(--main-gray-text-color);
 }
 
-.prevButton {
-
-}
-
-.nextButton {
-
-}
-
 .appointmentsNumber {
   margin-top: 5vh;
   color: var(--main-gray-text-color);
   font-size: 1.7rem;
 }
 
-
 .calendarMonthText {
   padding-top: 2%;
 }
 
+.availableAppointments {
+  text-align: left;
+  width: 600px;
+}
+
+.availableAppointment {
+  display: flex;
+  margin: 8% 0;
+  justify-content: space-around;
+  color: var(--main-gray-text-color);
+}
+
+.availableAppointment::before{
+   content: '';
+   display: inline-block;
+   width: 15px;
+   height: 15px;
+   -moz-border-radius: 7.5px;
+   -webkit-border-radius: 7.5px;
+   border-radius: 7.5px;
+   background-color: var(--main-color);
+}
+
+.takeAppointmentTitle {
+  margin: 4vh 0 10vh 0;
+  color: var(--main-gray-text-color);
+  font-weight: 200;
+}
+
+.availableAppointmentsDate {
+  color: var(--main-gray-text-color);
+  margin-top: 10vh;
+}
+
+.availableAppointmentButton {
+  border: none;
+  background-color: var(--main-color);
+  cursor: pointer;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
 
 
 
@@ -264,8 +293,6 @@ code {
 
 
 * {
-  box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
   list-style: none;
   margin: 0;
   outline: none;
@@ -274,10 +301,6 @@ code {
 
 a {
   text-decoration: none;
-}
-
-body, html {
-  height: 100%;
 }
 
 body {
@@ -296,12 +319,11 @@ body {
 }
 
 .calendar {
-	background: #2b4450;
+	/* background: #2b4450; */
 	border-radius: 4px;
-	box-shadow: 0 5px 20px rgba(0, 0, 0, .3);
-	height: 501px;
-  perspective: 1000;
-	transition: .9s;
+	/* box-shadow: 0 5px 20px rgba(0, 0, 0, .3); */
+	height: 500px;
+	/* transition: .9s; */
 	transform-style: preserve-3d;
 	width: 100%;
 }
@@ -319,13 +341,13 @@ body {
 }
 
 .current-date h1 {
-	color: #dfebed;
+	color: var(--secondary-gray-text-color);
 	font-size: 1.4em;
 	font-weight: 300;
 }
 
 .week-days {
-	color: #dfebed;
+	color: var(--main-gray-text-color);
 	display: flex;
 	justify-content: space-between;
 	font-weight: 600;
@@ -339,7 +361,7 @@ body {
 }
 
 .weeks {
-	color: #fff;
+	color: var(--main-gray-text-color);
 	display: flex;
 	flex-direction: column;
 	padding: 0 40px;
@@ -363,6 +385,7 @@ body {
 }
 
 .weeks span.active {
+  color: white;
 	background: #f78536;
 	border-radius: 50%;
 }
@@ -370,37 +393,6 @@ body {
 .weeks span:not(.last-month):hover {
 	cursor: pointer;
 	font-weight: 600;
-}
-
-.event {
-	position: relative;
-}
-
-.event:after {
-	content: '•';
-	color: #f78536;
-	font-size: 1.4em;
-	position: absolute;
-	right: -4px;
-	top: -4px;
-}
-
-/* Back - Event form */
-
-.back {
-	height: 100%;
-	transform: rotateY(180deg);
-}
-
-.back input {
-	background: none;
-	border: none;
-	border-bottom: 1px solid rgba(73, 114, 133, .6);
-	color: #dfebed;
-	font-size: 1.4em;
-	font-weight: 300;
-	padding: 30px 40px;
-	width: 100%;
 }
 
 .info {
@@ -467,14 +459,3 @@ body {
 	background: #5889a0;
 	outline: none;
 }
-
-/* Flip animation */
-
-.flip {
-  transform: rotateY(180deg);
-}
-
-.front, .back {
-	backface-visibility: hidden;
-}
-

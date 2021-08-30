@@ -5,7 +5,7 @@ const Calender = () => (
       <div className="front">
         <div className="current-date">
           <button className="prevButton calenderButton" type="button" onClick={() => { }}>&#10094;</button>
-          <h1 className="calendarMonthText">January 2016</h1>
+          <h1 className="calendarMonthText">January 2021</h1>
           <button className="nextButton calenderButton" type="button" onClick={() => { }}>&#10095;</button>
         </div>
 
@@ -71,51 +71,6 @@ const Calender = () => (
               <span>31</span>
             </div>
           </div>
-        </div>
-      </div>
-
-      <div className="back">
-        <input placeholder="What's the event?" />
-        <div className="info">
-          <div className="date">
-            <p className="info-date">
-              Date:
-              {' '}
-              <span>Jan 15th, 2016</span>
-            </p>
-            <p className="info-time">
-              Time:
-              {' '}
-              <span>6:35 PM</span>
-            </p>
-          </div>
-          <div className="address">
-            <p>
-              Address:
-              {' '}
-              <span>129 W 81st St, New York, NY</span>
-            </p>
-          </div>
-          <div className="observations">
-            <p>
-              Observations:
-              {' '}
-              <span>Be there 15 minutes earlier</span>
-            </p>
-          </div>
-        </div>
-
-        <div className="actions">
-          <button type="button" className="save">
-            Save
-            {' '}
-            <i className="ion-checkmark" />
-          </button>
-          <button type="button" className="dismiss">
-            Dismiss
-            {' '}
-            <i className="ion-android-close" />
-          </button>
         </div>
       </div>
 
