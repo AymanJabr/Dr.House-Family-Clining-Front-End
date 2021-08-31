@@ -1,23 +1,425 @@
 #root {
   --main-color: #ff6026;
   --secondary-color: #312b9d;
-
   --main-background-color: #f7f5fa;
-
   --main-gray-text-color: #4d4d4d;
   --secondary-gray-text-color: #8c8b8c;
+  --secondary-gray-text-color-transparent: #8c8b8c4b;
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    'Roboto',
+    'Oxygen',
+    'Ubuntu',
+    'Cantarell',
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: var(--main-gray-text-color);
+  background: #dfebed;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family:
+    source-code-pro,
+    Menlo,
+    Monaco,
+    Consolas,
+    'Courier New',
     monospace;
+}
+
+.imageOuter {
+  height: 100vh;
+  width: 100vw;
+  overflow: auto;
+}
+
+.singleOuter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  background-color: var(--main-background-color);
+}
+
+.width100 {
+  width: 100%;
+}
+
+.singleInner {
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 30%;
+  left: 30%;
+}
+
+.backgroundImage {
+  height: 100vh;
+  width: 100vw;
+  opacity: 0.2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-image: url('./images/clinic.jpg');
+  background-size: auto;
+}
+
+.imageInner {
+  position: absolute;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 30%;
+  left: 30%;
+}
+
+.lightTextWeight {
+  font-weight: 100 !important;
+}
+
+.SignInEmailInput,
+.SignUpEmailInput {
+  display: block;
+  text-indent: 2vw;
+  margin: 20px 15px;
+  background-color: rgba(255, 255, 255, 0.7);
+  height: 1.6rem;
+  border-radius: 20px;
+  width: 35vw;
+  border: 1px solid var(--main-gray-text-color);
+}
+
+.SignInEmailInput:focus,
+.SignUpEmailInput:focus {
+  outline: none;
+}
+
+.SignInPasswordInput,
+.SignUpPasswordInput {
+  display: block;
+  margin: 20px 15px;
+  text-indent: 2vw;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 20px;
+  width: 35vw;
+  height: 1.6rem;
+  border: 1px solid var(--main-gray-text-color);
+}
+
+.SignInPasswordInput:focus,
+.SignUpPasswordInput:focus {
+  outline: none;
+}
+
+.correctEnteredField {
+  border: 1px solid greenyellow;
+}
+
+.wrongEnteredField {
+  border: 1px solid red;
+}
+
+.SignInSubmit,
+.SignUpSubmit {
+  display: block;
+  margin: 10px auto;
+  border-radius: 20px;
+  padding: 10px 30px;
+  font-size: 0.9rem;
+  border: none;
+  color: var(--main-background-color);
+  background-color: var(--main-color);
+}
+
+.signInForgotPasswordLink,
+.SignUpSignInLink {
+  color: var(--secondary-gray-text-color);
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 25vh;
+}
+
+.signInForgotPasswordLink:hover,
+.SignUpSignInLink:hover {
+  cursor: pointer;
+}
+
+.appointmentsCarousel {
+  display: flex;
+}
+
+.appointmentsContainer {
+  padding: 2% 5% 5% 5%;
+  box-shadow: 1px 1px 15px var(--main-gray-text-color);
+  border-radius: 5px;
+  border: 1px solid green;
+  background-color: white;
+}
+
+.carouselButton {
+  border: none;
+  background-color: inherit;
+  font-size: 2.5rem;
+  margin: 0 5px;
+  color: var(--secondary-gray-text-color);
+}
+
+.carouselButton:hover {
+  cursor: pointer;
+  color: var(--main-gray-text-color);
+}
+
+.calenderButton {
+  border: none;
+  background-color: inherit;
+  font-size: 2rem;
+  margin: 0 5px;
+  color: var(--secondary-gray-text-color);
+}
+
+.calenderButton:hover {
+  cursor: pointer;
+  color: var(--main-gray-text-color);
+}
+
+.appointmentsNumber {
+  margin-top: 5vh;
+  color: var(--main-gray-text-color);
+  font-size: 1.7rem;
+}
+
+.calendarMonthText {
+  padding-top: 2%;
+}
+
+.availableAppointments {
+  text-align: left;
+  width: 600px;
+}
+
+.availableAppointment {
+  display: flex;
+  margin: 8% 0;
+  justify-content: space-around;
+  color: var(--main-gray-text-color);
+}
+
+.availableAppointment::before {
+  content: '';
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  -moz-border-radius: 7.5px;
+  -webkit-border-radius: 7.5px;
+  border-radius: 7.5px;
+  background-color: var(--main-color);
+}
+
+.takeAppointmentTitle {
+  margin: 4vh 0 10vh 0;
+  color: var(--main-gray-text-color);
+  font-weight: 200;
+}
+
+.availableAppointmentsDate {
+  color: var(--main-gray-text-color);
+  margin-top: 10vh;
+}
+
+.availableAppointmentButton {
+  border: none;
+  background-color: var(--main-color);
+  cursor: pointer;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.monthlyReportGraph {
+  width: 90vw;
+  margin-bottom: 10%;
+}
+
+.monthlyReportTitle {
+  margin: 4vh 0 6vh 0;
+  color: var(--main-gray-text-color);
+  font-weight: 200;
+}
+
+* {
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.calenderContainer {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 600px;
+  width: 100%;
+}
+
+.calendar {
+  /* background: #2b4450; */
+  border-radius: 4px;
+
+  /* box-shadow: 0 5px 20px rgba(0, 0, 0, .3); */
+  height: 500px;
+
+  /* transition: .9s; */
+  transform-style: preserve-3d;
+  width: 100%;
+}
+
+/* Front - Calendar */
+.front {
+  transform: rotateY(0deg);
+}
+
+.current-date {
+  border-bottom: 1px solid rgba(73, 114, 133, 0.6);
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 40px;
+}
+
+.current-date h1 {
+  color: var(--secondary-gray-text-color);
+  font-size: 1.4em;
+  font-weight: 300;
+}
+
+.week-days {
+  color: var(--main-gray-text-color);
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  padding: 30px 40px;
+}
+
+.days {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.weeks {
+  color: var(--main-gray-text-color);
+  display: flex;
+  flex-direction: column;
+  padding: 0 40px;
+}
+
+.weeks div {
+  display: flex;
+  font-size: 1.2em;
+  font-weight: 300;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.last-month {
+  opacity: 0.3;
+}
+
+.weeks span {
+  padding: 10px;
+}
+
+.weeks span.active {
+  color: white;
+  background: #f78536;
+  border-radius: 50%;
+}
+
+.info span {
+  font-weight: 300;
+}
+
+.weeks span:not(.last-month):hover {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.info {
+  color: #dfebed;
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  font-size: 1.2em;
+  padding: 30px 40px;
+}
+
+.info div:not(.observations) {
+  margin-bottom: 40px;
+}
+
+.info .date {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info .date p {
+  width: 50%;
+}
+
+.info .address p {
+  width: 100%;
+}
+
+.actions {
+  bottom: 0;
+  border-top: 1px solid rgba(73, 114, 133, 0.6);
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+}
+
+.actions button {
+  background: none;
+  border: 0;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 3px;
+  margin: 0;
+  padding: 30px 0;
+  text-transform: uppercase;
+  width: 50%;
+}
+
+.actions button:first-of-type {
+  border-right: 1px solid rgba(73, 114, 133, 0.6);
+}
+
+.actions button:hover {
+  background: #497285;
+  cursor: pointer;
+}
+
+.actions button:active {
+  background: #5889a0;
+  outline: none;
 }
