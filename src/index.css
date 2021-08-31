@@ -1,9 +1,7 @@
 #root {
   --main-color: #ff6026;
   --secondary-color: #312b9d;
-
   --main-background-color: #f7f5fa;
-
   --main-gray-text-color: #4d4d4d;
   --secondary-gray-text-color: #8c8b8c;
   --secondary-gray-text-color-transparent: #8c8b8c4b;
@@ -11,16 +9,31 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    'Roboto',
+    'Oxygen',
+    'Ubuntu',
+    'Cantarell',
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: var(--main-gray-text-color);
+  background: #dfebed;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family:
+    source-code-pro,
+    Menlo,
+    Monaco,
+    Consolas,
+    'Courier New',
     monospace;
 }
 
@@ -60,11 +73,10 @@ code {
   top: 0;
   left: 0;
   background-image: url('./images/clinic.jpg');
-  background-size: auto 
-
+  background-size: auto;
 }
 
-.imageInner{
+.imageInner {
   position: absolute;
   opacity: 1;
   display: flex;
@@ -78,7 +90,8 @@ code {
   font-weight: 100 !important;
 }
 
-.SignInEmailInput, .SignUpEmailInput {
+.SignInEmailInput,
+.SignUpEmailInput {
   display: block;
   text-indent: 2vw;
   margin: 20px 15px;
@@ -87,14 +100,15 @@ code {
   border-radius: 20px;
   width: 35vw;
   border: 1px solid var(--main-gray-text-color);
-
 }
 
-.SignInEmailInput:focus, .SignUpEmailInput:focus {
+.SignInEmailInput:focus,
+.SignUpEmailInput:focus {
   outline: none;
 }
 
-.SignInPasswordInput, .SignUpPasswordInput {
+.SignInPasswordInput,
+.SignUpPasswordInput {
   display: block;
   margin: 20px 15px;
   text-indent: 2vw;
@@ -105,19 +119,21 @@ code {
   border: 1px solid var(--main-gray-text-color);
 }
 
-.SignInPasswordInput:focus, .SignUpPasswordInput:focus {
+.SignInPasswordInput:focus,
+.SignUpPasswordInput:focus {
   outline: none;
 }
 
 .correctEnteredField {
-  border: 1px solid greenyellow
+  border: 1px solid greenyellow;
 }
 
 .wrongEnteredField {
   border: 1px solid red;
 }
 
-.SignInSubmit, .SignUpSubmit {
+.SignInSubmit,
+.SignUpSubmit {
   display: block;
   margin: 10px auto;
   border-radius: 20px;
@@ -128,16 +144,16 @@ code {
   background-color: var(--main-color);
 }
 
-
-
-.signInForgotPasswordLink, .SignUpSignInLink {
+.signInForgotPasswordLink,
+.SignUpSignInLink {
   color: var(--secondary-gray-text-color);
   font-size: 1rem;
   text-align: center;
   margin-top: 25vh;
 }
 
-.signInForgotPasswordLink:hover, .SignUpSignInLink:hover {
+.signInForgotPasswordLink:hover,
+.SignUpSignInLink:hover {
   cursor: pointer;
 }
 
@@ -201,15 +217,15 @@ code {
   color: var(--main-gray-text-color);
 }
 
-.availableAppointment::before{
-   content: '';
-   display: inline-block;
-   width: 15px;
-   height: 15px;
-   -moz-border-radius: 7.5px;
-   -webkit-border-radius: 7.5px;
-   border-radius: 7.5px;
-   background-color: var(--main-color);
+.availableAppointment::before {
+  content: '';
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  -moz-border-radius: 7.5px;
+  -webkit-border-radius: 7.5px;
+  border-radius: 7.5px;
+  background-color: var(--main-color);
 }
 
 .takeAppointmentTitle {
@@ -234,7 +250,7 @@ code {
 
 .monthlyReportGraph {
   width: 90vw;
-  /* height: 70vh; */
+  margin-bottom: 10%;
 }
 
 .monthlyReportTitle {
@@ -242,64 +258,6 @@ code {
   color: var(--main-gray-text-color);
   font-weight: 200;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 * {
   list-style: none;
@@ -312,159 +270,156 @@ a {
   text-decoration: none;
 }
 
-body {
-	background: #dfebed;
-	font-family: 'Roboto', sans-serif;
-}
-
 .calenderContainer {
-	align-items: center;
-	display: flex;
-	height: 100%;
-	justify-content: center;
-	margin: 0 auto;
-	max-width: 600px;
-	width: 100%;
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 600px;
+  width: 100%;
 }
 
 .calendar {
-	/* background: #2b4450; */
-	border-radius: 4px;
-	/* box-shadow: 0 5px 20px rgba(0, 0, 0, .3); */
-	height: 500px;
-	/* transition: .9s; */
-	transform-style: preserve-3d;
-	width: 100%;
+  /* background: #2b4450; */
+  border-radius: 4px;
+
+  /* box-shadow: 0 5px 20px rgba(0, 0, 0, .3); */
+  height: 500px;
+
+  /* transition: .9s; */
+  transform-style: preserve-3d;
+  width: 100%;
 }
 
 /* Front - Calendar */
 .front {
-	transform: rotateY(0deg);
+  transform: rotateY(0deg);
 }
 
 .current-date {
-	border-bottom: 1px solid rgba(73, 114, 133, .6);
-	display: flex;
-	justify-content: space-between;
-	padding: 30px 40px;
+  border-bottom: 1px solid rgba(73, 114, 133, 0.6);
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 40px;
 }
 
 .current-date h1 {
-	color: var(--secondary-gray-text-color);
-	font-size: 1.4em;
-	font-weight: 300;
+  color: var(--secondary-gray-text-color);
+  font-size: 1.4em;
+  font-weight: 300;
 }
 
 .week-days {
-	color: var(--main-gray-text-color);
-	display: flex;
-	justify-content: space-between;
-	font-weight: 600;
-	padding: 30px 40px;
+  color: var(--main-gray-text-color);
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  padding: 30px 40px;
 }
 
 .days {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .weeks {
-	color: var(--main-gray-text-color);
-	display: flex;
-	flex-direction: column;
-	padding: 0 40px;
+  color: var(--main-gray-text-color);
+  display: flex;
+  flex-direction: column;
+  padding: 0 40px;
 }
 
 .weeks div {
-	display: flex;
-	font-size: 1.2em;
-	font-weight: 300;
-	justify-content: space-between;
-	margin-bottom: 20px;
-	width: 100%;
+  display: flex;
+  font-size: 1.2em;
+  font-weight: 300;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  width: 100%;
 }
 
 .last-month {
-	opacity: .3;
+  opacity: 0.3;
 }
 
 .weeks span {
-	padding: 10px;
+  padding: 10px;
 }
 
 .weeks span.active {
   color: white;
-	background: #f78536;
-	border-radius: 50%;
-}
-
-.weeks span:not(.last-month):hover {
-	cursor: pointer;
-	font-weight: 600;
-}
-
-.info {
-	color: #dfebed;
-	display: flex;
-	flex-direction: column;
-	font-weight: 600;
-	font-size: 1.2em;
-	padding: 30px 40px;
-}
-
-.info div:not(.observations) {
-	margin-bottom: 40px;
+  background: #f78536;
+  border-radius: 50%;
 }
 
 .info span {
-	font-weight: 300;
+  font-weight: 300;
+}
+
+.weeks span:not(.last-month):hover {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.info {
+  color: #dfebed;
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  font-size: 1.2em;
+  padding: 30px 40px;
+}
+
+.info div:not(.observations) {
+  margin-bottom: 40px;
 }
 
 .info .date {
-	display: flex;
-	justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .info .date p {
-	width: 50%;
+  width: 50%;
 }
 
 .info .address p {
-	width: 100%;
+  width: 100%;
 }
 
 .actions {
-	bottom: 0;
-	border-top: 1px solid rgba(73, 114, 133, .6);
-	display: flex;
-	justify-content: space-between;
-	position: absolute;
-	width: 100%;
+  bottom: 0;
+  border-top: 1px solid rgba(73, 114, 133, 0.6);
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
 }
 
 .actions button {
-	background: none;
-	border: 0;
-	color: #fff;
-	font-weight: 600;
-	letter-spacing: 3px;
-	margin: 0;
-	padding: 30px 0;
-	text-transform: uppercase;
-	width: 50%;
+  background: none;
+  border: 0;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 3px;
+  margin: 0;
+  padding: 30px 0;
+  text-transform: uppercase;
+  width: 50%;
 }
 
 .actions button:first-of-type {
-	border-right: 1px solid rgba(73, 114, 133, .6);
+  border-right: 1px solid rgba(73, 114, 133, 0.6);
 }
 
 .actions button:hover {
-	background: #497285;
-	cursor: pointer;
+  background: #497285;
+  cursor: pointer;
 }
 
 .actions button:active {
-	background: #5889a0;
-	outline: none;
+  background: #5889a0;
+  outline: none;
 }
